@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Web page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Ashwith Sai Anisehtty figures out</h1>
+    <form>
+        <label for="firstValue">Enter a number:</label>
+        <input type="number" id="firstValue" value="2"><br>
+        <label for="secondValue">Enter a number:</label>
+        <input type="number" id="secondValue" value="12"><br>
+        <button type="button" onclick="powerSum()">Compute</button>
+    </form>
+    <div id="mathResult"></div>
+    <script>
+        function powerSum() {
+            const first = parseInt(document.getElementById('firstValue').value);
+            const second = parseInt(document.getElementById('secondValue').value);
+            let sum = 0;
+    
+            for (let i = 0; i < first; i++) {
+                sum += Math.pow(second, i);
+            }
+            document.getElementById('mathResult').innerHTML = `Sum of ${first} powers with base ${second} is ${sum}`;
+        }
+    </script>
+
+</body>
+
+</html>
